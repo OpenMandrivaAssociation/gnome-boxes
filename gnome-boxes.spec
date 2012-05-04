@@ -22,6 +22,7 @@ BuildRequires:	pkgconfig(spice-client-gtk-3.0) >= 0.9
 BuildRequires:	pkgconfig(gudev-1.0) >= 167
 BuildRequires:	pkgconfig(libosinfo-1.0) >= 0.1.1
 BuildRequires:	tracker-devel
+BuildRequires:	GL-devel
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
 Requires:	qemu-img
