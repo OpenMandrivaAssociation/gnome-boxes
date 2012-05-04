@@ -21,7 +21,7 @@ BuildRequires:	pkgconfig(libxml-2.0) >= 2.7.8
 BuildRequires:	pkgconfig(spice-client-gtk-3.0) >= 0.9
 BuildRequires:	pkgconfig(gudev-1.0) >= 167
 BuildRequires:	pkgconfig(libosinfo-1.0) >= 0.1.1
-BuildRequires:	pkgconfig(tracker-sparql-0.14) >= 0.13.1
+BuildRequires:	tracker-devel
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
 Requires:	qemu-img
