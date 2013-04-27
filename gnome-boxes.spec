@@ -57,10 +57,10 @@ sed -i -e 's,^\(MimeType=.*[^;]\)$,\1;,g' data/gnome-boxes.desktop.in.in
 %files -f %{name}.lang
 %doc AUTHORS README NEWS TODO
 %{_bindir}/%{name}
+%{_libexecdir}/gnome-boxes-search-provider
 %{_datadir}/%{name}/
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/glib-2.0/schemas/org.gnome.boxes.gschema.xml
-%{_libexecdir}/gnome-boxes-search-provider
 %{_datadir}/dbus-1/services/org.gnome.Boxes.SearchProvider.service
 %{_datadir}/gnome-shell/search-providers/gnome-boxes-search-provider.ini
 %{_iconsdir}/hicolor/*/apps/gnome-boxes.*
