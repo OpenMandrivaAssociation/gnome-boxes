@@ -6,7 +6,7 @@ Version:	3.6.3
 Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
-URL:		https://live.gnome.org/Boxes
+Url:		https://live.gnome.org/Boxes
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-boxes/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	intltool
