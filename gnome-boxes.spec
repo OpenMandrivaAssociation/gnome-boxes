@@ -10,6 +10,7 @@ Url:		https://live.gnome.org/Boxes
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-boxes/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	intltool
+BuildRequires:	itstool
 BuildRequires:	vala
 BuildRequires:	vala-tools
 BuildRequires:	tracker-devel
