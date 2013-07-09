@@ -15,6 +15,7 @@ BuildRequires:	itstool
 BuildRequires:	libxml2-utils
 BuildRequires:	vala
 BuildRequires:	vala-tools
+BuildRequires:	vala-devel
 BuildRequires:	tracker-devel
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
 BuildRequires:	pkgconfig(gl)
