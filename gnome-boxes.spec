@@ -11,6 +11,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-boxes/%{url_ver}/%{name}-%
 
 BuildRequires:	intltool
 BuildRequires:	itstool
+BuildRequires:	libxml2-utils
 BuildRequires:	vala
 BuildRequires:	vala-tools
 BuildRequires:	tracker-devel
