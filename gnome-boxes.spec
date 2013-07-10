@@ -29,7 +29,7 @@ BuildRequires:	pkgconfig(libvirt-gconfig-1.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(spice-client-gtk-3.0)
 BuildRequires:  pkgconfig(libsoup-2.4)
-BuildRequires:	yelp
+BuildRequires:	yelp-tools
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
 Requires:	qemu-img
