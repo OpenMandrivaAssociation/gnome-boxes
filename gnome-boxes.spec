@@ -2,8 +2,8 @@
 
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
-Version:	3.8.3
-Release:	7
+Version:	3.14.1
+Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Url:		https://live.gnome.org/Boxes
@@ -21,13 +21,13 @@ BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(spice-client-gtk-3.0)
 BuildRequires:	pkgconfig(gtk-vnc-2.0)
 BuildRequires:	pkgconfig(gudev-1.0)
 BuildRequires:	pkgconfig(libosinfo-1.0)
 BuildRequires:	pkgconfig(libvirt-gobject-1.0)
 BuildRequires:	pkgconfig(libvirt-gconfig-1.0)
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	pkgconfig(spice-client-gtk-3.0)
 BuildRequires:  pkgconfig(libsoup-2.4)
 BuildRequires:	yelp-tools
 # XXX - libvirtd service should be running
@@ -46,30 +46,28 @@ Standalone boxes manager for GNOME desktop.
 %prep
 %setup -q
 %apply_patches 
-autoreconf -fi
-
-
-# add semicolon after mimetype (will be fixed in 3.3.3!)
-sed -i -e 's,^\(MimeType=.*[^;]\)$,\1;,g' data/gnome-boxes.desktop.in.in
 
 %build
-%configure2_5x
+export CC=gcc
+export CXX=g++
+%configure
 %make
 
 %install
 %makeinstall_std
 
-%find_lang %{name}
+%find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
 %doc AUTHORS README NEWS TODO
 %{_bindir}/%{name}
 %{_libexecdir}/gnome-boxes-search-provider
 %{_datadir}/%{name}/
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/appdata/org.gnome.Boxes.appdata.xml
+%{_datadir}/applications/org.gnome.Boxes.desktop
+%{_datadir}/dbus-1/services/org.gnome.Boxes.service
 %{_datadir}/glib-2.0/schemas/org.gnome.boxes.gschema.xml
 %{_datadir}/dbus-1/services/org.gnome.Boxes.SearchProvider.service
 %{_datadir}/gnome-shell/search-providers/gnome-boxes-search-provider.ini
-%{_datadir}/help/C/gnome-boxes
 %{_iconsdir}/hicolor/*/apps/gnome-boxes.*
 
