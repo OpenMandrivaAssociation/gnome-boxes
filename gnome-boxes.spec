@@ -2,7 +2,7 @@
 
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
-Version:	3.16.1
+Version:	3.18.1
 Release:	2
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
@@ -46,7 +46,7 @@ Standalone boxes manager for GNOME desktop.
 
 %prep
 %setup -q
-%apply_patches 
+%apply_patches
 
 %build
 export CC=gcc

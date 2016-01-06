@@ -1,5 +1,6 @@
 removed_sources:
   gnome-boxes-3.14.1.tar.xz: 9fcdb3dfede6304992dbb1d55910e538501efd50
+  gnome-boxes-3.16.1.tar.xz: c03490d8995466ad2b3b93aa5fcbd627ca60c3ab
   gnome-boxes-3.8.3.tar.xz: 4ebef084919b9bafa50ce2b4b4618d7c02a52fcf
 sources:
-  gnome-boxes-3.16.1.tar.xz: c03490d8995466ad2b3b93aa5fcbd627ca60c3ab
+  gnome-boxes-3.18.1.tar.xz: f7c4e6f9ac43e7366af92b142dcbd76b39d4e90e
