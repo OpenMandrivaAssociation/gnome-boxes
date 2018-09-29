@@ -31,6 +31,9 @@ BuildRequires:	pkgconfig(libvirt-gconfig-1.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(libsoup-2.4)
 BuildRequires:	yelp-tools
+BuildRequires:	meson
+BuildRequires:	pkgconfig(json-glib-1.0)
+
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
 Requires:	qemu-img
@@ -49,13 +52,11 @@ Standalone boxes manager for GNOME desktop.
 %apply_patches
 
 %build
-export CC=gcc
-export CXX=g++
-%configure
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 %find_lang %{name} --with-gnome
 
