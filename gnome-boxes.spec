@@ -33,6 +33,7 @@ BuildRequires:  pkgconfig(libsoup-2.4)
 BuildRequires:	yelp-tools
 BuildRequires:	meson
 BuildRequires:	pkgconfig(json-glib-1.0)
+BuildRequires:  pkgconfig(libsecret-1)
 
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
