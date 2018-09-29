@@ -35,6 +35,7 @@ BuildRequires:	meson
 BuildRequires:	pkgconfig(json-glib-1.0)
 BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  pkgconfig(libusb-1.0)
+BuildRequires:	pkgconfig(webkit2gtk-4.0)
 
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
