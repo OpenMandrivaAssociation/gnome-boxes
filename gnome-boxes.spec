@@ -17,11 +17,14 @@ BuildRequires:	vala-tools
 BuildRequires:	vala-devel
 BuildRequires:	tracker-devel
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
+BuildRequires:	pkgconfig(clutter-1.0)
+BuildRequires:	pkgconfig(freerdp2)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(spice-client-gtk-3.0)
+BuildRequires:	pkgconfig(govirt-1.0)
 BuildRequires:	pkgconfig(gtk-vnc-2.0)
 BuildRequires:	pkgconfig(gudev-1.0)
 BuildRequires:  pkgconfig(libarchive)
@@ -36,6 +39,7 @@ BuildRequires:	pkgconfig(json-glib-1.0)
 BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(webkit2gtk-4.0)
+BuildRequires:	pkgconfig(tracker-sparql-2.0)
 
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
