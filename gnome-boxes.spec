@@ -40,6 +40,7 @@ BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(webkit2gtk-4.0)
 BuildRequires:	pkgconfig(tracker-sparql-2.0)
+BuildRequires:	tracker-vala
 
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
