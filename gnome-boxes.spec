@@ -2,7 +2,7 @@
 
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
-Version:	3.30.1
+Version:	3.30.3
 Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
