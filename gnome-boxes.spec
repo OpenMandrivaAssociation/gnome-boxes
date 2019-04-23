@@ -42,6 +42,7 @@ BuildRequires:	pkgconfig(webkit2gtk-4.0)
 BuildRequires:	pkgconfig(tracker-sparql-2.0)
 BuildRequires:	tracker-vala
 BuildRequires:  pkgconfig(vte-2.91)
+BuildRequires:  libosinfo-vala
 
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
