@@ -85,4 +85,10 @@ export CXX=g++
 %{_datadir}/gnome-shell/search-providers/gnome-boxes-search-provider.ini
 %{_iconsdir}/hicolor/*/apps/org.gnome.Boxes.svg
 %{_iconsdir}/hicolor/symbolic/apps/org.gnome.Boxes-symbolic.svg
+%{_includedir}/gnome-boxes/govf/*.h
+%{_includedir}/gnome-boxes/gtk-frdp/*.h
+%{_libdir}/gnome-boxes/libgovf-0.1.so
+%{_libdir}/gnome-boxes/libgtk-frdp-0.1.so
+%{_libdir}/gnome-boxes/pkgconfig
+%{_libdir}/gnome-boxes/girepository-1.0/
 
