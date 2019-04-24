@@ -73,15 +73,16 @@ export CXX=g++
 %find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
-%doc AUTHORS README NEWS TODO
+%doc AUTHORS README.md NEWS TODO
 %{_bindir}/%{name}
 %{_libexecdir}/gnome-boxes-search-provider
 %{_datadir}/%{name}/
-%{_datadir}/appdata/org.gnome.Boxes.appdata.xml
+%{_datadir}/metainfo/org.gnome.Boxes.appdata.xml
 %{_datadir}/applications/org.gnome.Boxes.desktop
 %{_datadir}/dbus-1/services/org.gnome.Boxes.service
 %{_datadir}/glib-2.0/schemas/org.gnome.boxes.gschema.xml
 %{_datadir}/dbus-1/services/org.gnome.Boxes.SearchProvider.service
 %{_datadir}/gnome-shell/search-providers/gnome-boxes-search-provider.ini
-%{_iconsdir}/hicolor/*/apps/gnome-boxes*.*
+%{_iconsdir}/hicolor/*/apps/org.gnome.Boxes.svg
+%{_iconsdir}/hicolor/symbolic/apps/org.gnome.Boxes-symbolic.svg
 
