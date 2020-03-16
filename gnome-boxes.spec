@@ -73,9 +73,9 @@ export CXX=g++
 %find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
-%doc AUTHORS README.md NEWS TODO
+%doc AUTHORS README.md NEWS
 %{_bindir}/%{name}
-%{_libexecdir}/gnome-boxes-search-provider
+#{_libexecdir}/gnome-boxes-search-provider
 %{_datadir}/%{name}/
 %{_datadir}/metainfo/org.gnome.Boxes.appdata.xml
 %{_datadir}/applications/org.gnome.Boxes.desktop
