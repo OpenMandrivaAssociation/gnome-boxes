@@ -82,7 +82,7 @@ export CXX=g++
 %{_datadir}/dbus-1/services/org.gnome.Boxes.service
 %{_datadir}/glib-2.0/schemas/org.gnome.boxes.gschema.xml
 %{_datadir}/dbus-1/services/org.gnome.Boxes.SearchProvider.service
-%{_datadir}/gnome-shell/search-providers/gnome-boxes-search-provider.ini
+#{_datadir}/gnome-shell/search-providers/gnome-boxes-search-provider.ini
 %{_iconsdir}/hicolor/*/apps/org.gnome.Boxes.svg
 %{_iconsdir}/hicolor/symbolic/apps/org.gnome.Boxes-symbolic.svg
 %{_includedir}/gnome-boxes/govf/*.h
