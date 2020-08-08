@@ -48,6 +48,12 @@ BuildRequires:  libosinfo-vala
 Requires:	libvirt-utils
 Requires:	qemu-img
 Requires:	qemu
+Requires: qemu-kvm
+Recommends: qemu-system-arm
+Recommends: qemu-system-aarch64
+Recommends: qemu-system-x86
+Recommends: qemu-system-riscv
+Requires: tracker
 # Needed for unattended installer:
 Requires:	mtools
 Requires:	fuseiso
