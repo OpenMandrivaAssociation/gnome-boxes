@@ -3,7 +3,7 @@
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
 Version:	3.36.6
-Release:	1
+Release:	2
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Url:		https://live.gnome.org/Boxes
@@ -49,10 +49,7 @@ Requires:	libvirt-utils
 Requires:	qemu-img
 Requires:	qemu
 Requires: qemu-kvm
-Recommends: qemu-system-arm
-Recommends: qemu-system-aarch64
 Recommends: qemu-system-x86
-Recommends: qemu-system-riscv
 Requires: tracker
 # Needed for unattended installer:
 Requires:	mtools
