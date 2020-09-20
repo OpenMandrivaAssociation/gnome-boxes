@@ -8,6 +8,7 @@ Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Url:		https://live.gnome.org/Boxes
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-boxes/%{url_ver}/%{name}-%{version}.tar.xz
+Patch0:   gnome-boxes-tracker3.patch
 
 BuildRequires:	intltool
 BuildRequires:	itstool
@@ -66,6 +67,7 @@ Standalone boxes manager for GNOME desktop.
 %autopatch -p1
 
 %build
+%autopatch -p1
 export CC=gcc
 export CXX=g++
 %meson
