@@ -69,8 +69,8 @@ Standalone boxes manager for GNOME desktop.
 
 %build
 %autopatch -p1
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %meson
 %meson_build
 
