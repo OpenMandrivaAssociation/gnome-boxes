@@ -2,13 +2,12 @@
 
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
-Version:	3.38.0
+Version:	3.38.1
 Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Url:		https://live.gnome.org/Boxes
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-boxes/%{url_ver}/%{name}-%{version}.tar.xz
-#Patch0:   gnome-boxes-tracker3.patch
 
 BuildRequires:	intltool
 BuildRequires:	itstool
