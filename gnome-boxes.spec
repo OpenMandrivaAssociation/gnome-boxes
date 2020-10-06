@@ -45,6 +45,7 @@ BuildRequires:	pkgconfig(tracker-sparql-3.0)
 BuildRequires:	tracker-vala
 BuildRequires:  pkgconfig(vte-2.91)
 BuildRequires:  libosinfo-vala
+BuildRequires:  typelib(Handy)
 
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
