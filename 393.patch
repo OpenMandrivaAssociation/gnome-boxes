@@ -1,28 +1,7 @@
-From ec5f8ed9382f09c8fc4ae131d25ea1c412fbb1f1 Mon Sep 17 00:00:00 2001
-From: Felipe Borges <felipeborges@gnome.org>
-Date: Tue, 3 Nov 2020 12:28:42 +0100
-Subject: [PATCH] vm-configurator: Default to ich9 sound model
-
-These days users can set which OS they are installing in case
-libosinfo can't detect a given ISO. This way, it is very rare
-when an user will perform an installation in which we can't figure
-what's a adequate sound device model for it. And for those corner
-cases, it is safe to assume that ich9 would likely work. If not,
-the device sound model can be changed manually in the configuration.
-
-This fixes issue #618, in which we were returning nothing when the
-method signature had a (non-null) return type specified.
-
-Fixes #618
----
- src/vm-configurator.vala | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/src/vm-configurator.vala b/src/vm-configurator.vala
-index f2a50bb8..f0c340b5 100644
---- a/src/vm-configurator.vala
-+++ b/src/vm-configurator.vala
-@@ -468,7 +468,7 @@ else if (osinfo_name == "sb16")
+diff -uraN gnome-boxes-3.38.1/src/vm-configurator.vala omv-gnome-boxes-3.38.1/src/vm-configurator.vala
+--- gnome-boxes-3.38.1/src/vm-configurator.vala	2020-10-06 15:59:46.900945700 +0200
++++ omv-gnome-boxes-3.38.1/src/vm-configurator.vala	2020-11-15 18:06:55.383184432 +0100
+@@ -463,7 +463,7 @@
              libvirt_name = "sb16";
  
          var model = get_enum_value (libvirt_name, typeof (DomainSoundModel));
@@ -31,5 +10,3 @@ index f2a50bb8..f0c340b5 100644
          return (DomainSoundModel) model;
      }
  
--- 
-GitLab
