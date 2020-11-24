@@ -100,3 +100,5 @@ Standalone boxes manager for GNOME desktop.
 %{_libdir}/gnome-boxes/pkgconfig
 %{_libdir}/gnome-boxes/girepository-1.0/
 
+%{_includedir}/gnome-boxes/libhandy-0.0/*
+%{_libdir}/gnome-boxes/libhandy-0.0.so*
