@@ -8,6 +8,8 @@ Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Url:		https://live.gnome.org/Boxes
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-boxes/%{url_ver}/%{name}-%{version}.tar.xz
+# Patch 0 is needed but for some reason it not apply, even after rebasing (ABF screaming about previous applied patch or reversed).
+# So as workaround: patch source, create archive .tar.xz from it and upload to filestore as source0.
 #Patch0:   https://gitlab.gnome.org/GNOME/gnome-boxes/-/merge_requests/393.patch
 
 BuildRequires:	intltool
