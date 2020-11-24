@@ -2,12 +2,15 @@
 
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
-Version:	3.36.6
-Release:	2
+Version:	3.38.2
+Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Url:		https://live.gnome.org/Boxes
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-boxes/%{url_ver}/%{name}-%{version}.tar.xz
+# Patch 0 is needed but for some reason it not apply, even after rebasing (ABF screaming about previous applied patch or reversed).
+# So as workaround: patch source, create archive .tar.xz from it and upload to filestore as source0.
+#Patch0:   https://gitlab.gnome.org/GNOME/gnome-boxes/-/merge_requests/393.patch
 
 BuildRequires:	intltool
 BuildRequires:	itstool
@@ -23,6 +26,7 @@ BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:  pkgconfig(gtksourceview-4)
 BuildRequires:	pkgconfig(spice-client-gtk-3.0)
 BuildRequires:	pkgconfig(govirt-1.0)
 BuildRequires:	pkgconfig(gtk-vnc-2.0)
@@ -39,10 +43,12 @@ BuildRequires:	pkgconfig(json-glib-1.0)
 BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(webkit2gtk-4.0)
-BuildRequires:	pkgconfig(tracker-sparql-2.0)
+BuildRequires:	pkgconfig(libhandy-0.0)
+BuildRequires:	pkgconfig(tracker-sparql-3.0)
 BuildRequires:	tracker-vala
 BuildRequires:  pkgconfig(vte-2.91)
 BuildRequires:  libosinfo-vala
+BuildRequires:  typelib(Handy)
 
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
@@ -65,8 +71,9 @@ Standalone boxes manager for GNOME desktop.
 %autopatch -p1
 
 %build
-export CC=gcc
-export CXX=g++
+%autopatch -p1
+#export CC=gcc
+#export CXX=g++
 %meson
 %meson_build
 
@@ -95,3 +102,5 @@ export CXX=g++
 %{_libdir}/gnome-boxes/pkgconfig
 %{_libdir}/gnome-boxes/girepository-1.0/
 
+%{_includedir}/gnome-boxes/libhandy-0.0/*
+%{_libdir}/gnome-boxes/libhandy-0.0.so*

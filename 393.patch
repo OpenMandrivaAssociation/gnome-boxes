@@ -1,0 +1,12 @@
+diff -uraN gnome-boxes-3.38.2/src/vm-configurator.vala omv-gnome-boxes-3.38.2/src/vm-configurator.vala
+--- gnome-boxes-3.38.2/src/vm-configurator.vala	2020-11-20 17:05:54.667392000 +0100
++++ omv-gnome-boxes-3.38.2/src/vm-configurator.vala	2020-11-20 21:02:54.723233236 +0100
+@@ -463,7 +463,7 @@
+             libvirt_name = "sb16";
+ 
+         var model = get_enum_value (libvirt_name, typeof (DomainSoundModel));
+-        return_if_fail (model != -1);
++        return_val_if_fail (model != -1, (DomainSoundModel) DomainSoundModel.ICH9);
+         return (DomainSoundModel) model;
+     }
+ 
