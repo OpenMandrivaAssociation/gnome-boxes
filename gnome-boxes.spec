@@ -3,7 +3,7 @@
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
 Version:	3.38.2
-Release:	1
+Release:	2
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Url:		https://live.gnome.org/Boxes
@@ -11,6 +11,13 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-boxes/%{url_ver}/%{name}-%
 # Patch 0 is needed but for some reason it not apply, even after rebasing (ABF screaming about previous applied patch or reversed).
 # So as workaround: patch source, create archive .tar.xz from it and upload to filestore as source0.
 #Patch0:   https://gitlab.gnome.org/GNOME/gnome-boxes/-/merge_requests/393.patch
+
+# Revert the way upstream introduced the linhandy submodule in 3.38 (master is solved better)
+Patch1:         gnome-boxes-system-libhandy.patch
+# Convert libhandy to submodule, the master branch way
+Patch2:         gnome-boxes-libhandy-as-submodule.patch
+# Port to libhandy-1, taken from git master
+Patch3:         gnome-boxes-libhandy-1.patch
 
 BuildRequires:	intltool
 BuildRequires:	itstool
@@ -43,12 +50,13 @@ BuildRequires:	pkgconfig(json-glib-1.0)
 BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(webkit2gtk-4.0)
-BuildRequires:	pkgconfig(libhandy-0.0)
+BuildRequires:	pkgconfig(libhandy-1)
 BuildRequires:	pkgconfig(tracker-sparql-3.0)
 BuildRequires:	tracker-vala
 BuildRequires:  pkgconfig(vte-2.91)
 BuildRequires:  libosinfo-vala
 BuildRequires:  typelib(Handy)
+BuildRequires:  appstream-util
 
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
@@ -67,18 +75,21 @@ Requires:	gnome-icon-theme
 Standalone boxes manager for GNOME desktop.
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
-%autopatch -p1
-#export CC=gcc
-#export CXX=g++
 %meson
 %meson_build
 
 %install
 %meson_install
+
+# Remove unneeded development files
+rm -rf %{buildroot}%{_includedir}/gnome-boxes/
+rm -rf %{buildroot}%{_libdir}/gnome-boxes/girepository-1.0/
+rm -rf %{buildroot}%{_libdir}/gnome-boxes/pkgconfig/
+rm -rf %{buildroot}%{_datadir}/gnome-boxes/gir-1.0/
+rm -rf %{buildroot}%{_datadir}/gnome-boxes/vapi/
 
 %find_lang %{name} --with-gnome
 
@@ -95,12 +106,5 @@ Standalone boxes manager for GNOME desktop.
 %{_datadir}/gnome-shell/search-providers/org.gnome.Boxes.SearchProvider.ini
 %{_iconsdir}/hicolor/*/apps/org.gnome.Boxes.svg
 %{_iconsdir}/hicolor/symbolic/apps/org.gnome.Boxes-symbolic.svg
-%{_includedir}/gnome-boxes/govf/*.h
-%{_includedir}/gnome-boxes/gtk-frdp/*.h
 %{_libdir}/gnome-boxes/libgovf-0.1.so
 %{_libdir}/gnome-boxes/libgtk-frdp-0.1.so
-%{_libdir}/gnome-boxes/pkgconfig
-%{_libdir}/gnome-boxes/girepository-1.0/
-
-%{_includedir}/gnome-boxes/libhandy-0.0/*
-%{_libdir}/gnome-boxes/libhandy-0.0.so*
