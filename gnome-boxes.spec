@@ -107,4 +107,4 @@ rm -rf %{buildroot}%{_datadir}/gnome-boxes/vapi/
 %{_iconsdir}/hicolor/*/apps/org.gnome.Boxes.svg
 %{_iconsdir}/hicolor/symbolic/apps/org.gnome.Boxes-symbolic.svg
 %{_libdir}/gnome-boxes/libgovf-0.1.so
-%{_libdir}/gnome-boxes/libgtk-frdp-0.1.so
+#{_libdir}/gnome-boxes/libgtk-frdp-0.1.so
