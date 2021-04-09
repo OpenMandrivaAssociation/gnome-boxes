@@ -2,22 +2,12 @@
 
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
-Version:	3.38.2
-Release:	2
+Version:	40.0
+Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Url:		https://live.gnome.org/Boxes
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-boxes/%{url_ver}/%{name}-%{version}.tar.xz
-# Patch 0 is needed but for some reason it not apply, even after rebasing (ABF screaming about previous applied patch or reversed).
-# So as workaround: patch source, create archive .tar.xz from it and upload to filestore as source0.
-#Patch0:   https://gitlab.gnome.org/GNOME/gnome-boxes/-/merge_requests/393.patch
-
-# Revert the way upstream introduced the linhandy submodule in 3.38 (master is solved better)
-Patch1:         gnome-boxes-system-libhandy.patch
-# Convert libhandy to submodule, the master branch way
-Patch2:         gnome-boxes-libhandy-as-submodule.patch
-# Port to libhandy-1, taken from git master
-Patch3:         gnome-boxes-libhandy-1.patch
 
 BuildRequires:	intltool
 BuildRequires:	itstool
@@ -107,4 +97,4 @@ rm -rf %{buildroot}%{_datadir}/gnome-boxes/vapi/
 %{_iconsdir}/hicolor/*/apps/org.gnome.Boxes.svg
 %{_iconsdir}/hicolor/symbolic/apps/org.gnome.Boxes-symbolic.svg
 %{_libdir}/gnome-boxes/libgovf-0.1.so
-%{_libdir}/gnome-boxes/libgtk-frdp-0.1.so
+#{_libdir}/gnome-boxes/libgtk-frdp-0.1.so
