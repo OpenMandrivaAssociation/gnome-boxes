@@ -1,5 +1,7 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
+%global optflags %{optflags} -lgvncpulse-1.0
+
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
 Version:	41.1
