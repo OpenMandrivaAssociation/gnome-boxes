@@ -30,7 +30,19 @@ BuildRequires:	pkgconfig(spice-client-gtk-3.0)
 BuildRequires:	pkgconfig(govirt-1.0)
 BuildRequires:	pkgconfig(gtk-vnc-2.0)
 BuildRequires:	pkgconfig(gudev-1.0)
+# Workaround
+BuildRequires:  gtk-vnc
+BuildRequires:  gtk-vnc-common
+BuildRequires:  lib64gtk-vnc-gir2.0
+BuildRequires:  lib64gtk-vnc2.0-devel
+BuildRequires:  lib64gtk-vnc2.0_0
+BuildRequires:  lib64gvnc-gir1.0
+BuildRequires:  lib64gvnc1.0-devel
+BuildRequires:  lib64gvnc1.0_0
+BuildRequires:  lib64vncpulse-gir1.0
+BuildRequires:  lib64vncpulse1.0_0
 BuildRequires:  pkgconfig(gvncpulse-1.0)
+
 BuildRequires:  pkgconfig(libarchive)
 BuildRequires:	pkgconfig(libosinfo-1.0)
 BuildRequires:	pkgconfig(libvirt-gobject-1.0)
