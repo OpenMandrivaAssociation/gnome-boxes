@@ -2,7 +2,7 @@
 
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
-Version:	40.3
+Version:	41.2
 Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
@@ -28,6 +28,19 @@ BuildRequires:	pkgconfig(spice-client-gtk-3.0)
 BuildRequires:	pkgconfig(govirt-1.0)
 BuildRequires:	pkgconfig(gtk-vnc-2.0)
 BuildRequires:	pkgconfig(gudev-1.0)
+# Workaround
+BuildRequires:  gtk-vnc
+BuildRequires:  gtk-vnc-common
+BuildRequires:  %{_lib}gtk-vnc-gir2.0
+BuildRequires:  %{_lib}gtk-vnc2.0-devel
+BuildRequires:  %{_lib}gtk-vnc2.0_0
+BuildRequires:  %{_lib}gvnc-gir1.0
+BuildRequires:  %{_lib}gvnc1.0-devel
+BuildRequires:  %{_lib}gvnc1.0_0
+BuildRequires:  %{_lib}vncpulse-gir1.0
+BuildRequires:  %{_lib}vncpulse1.0_0
+BuildRequires:  pkgconfig(gvncpulse-1.0)
+
 BuildRequires:  pkgconfig(libarchive)
 BuildRequires:	pkgconfig(libosinfo-1.0)
 BuildRequires:	pkgconfig(libvirt-gobject-1.0)
@@ -68,6 +81,8 @@ Standalone boxes manager for GNOME desktop.
 %autosetup -p1
 
 %build
+#export CC=gcc
+#export CXX=g++
 %meson
 %meson_build
 
