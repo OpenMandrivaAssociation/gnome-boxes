@@ -1,7 +1,5 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-#global optflags %{optflags} -lgvncpulse
-
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
 Version:	41.2
@@ -33,14 +31,14 @@ BuildRequires:	pkgconfig(gudev-1.0)
 # Workaround
 BuildRequires:  gtk-vnc
 BuildRequires:  gtk-vnc-common
-BuildRequires:  lib64gtk-vnc-gir2.0
-BuildRequires:  lib64gtk-vnc2.0-devel
-BuildRequires:  lib64gtk-vnc2.0_0
-BuildRequires:  lib64gvnc-gir1.0
-BuildRequires:  lib64gvnc1.0-devel
-BuildRequires:  lib64gvnc1.0_0
-BuildRequires:  lib64vncpulse-gir1.0
-BuildRequires:  lib64vncpulse1.0_0
+BuildRequires:  %{_lib}gtk-vnc-gir2.0
+BuildRequires:  %{_lib}gtk-vnc2.0-devel
+BuildRequires:  %{_lib}gtk-vnc2.0_0
+BuildRequires:  %{_lib}gvnc-gir1.0
+BuildRequires:  %{_lib}gvnc1.0-devel
+BuildRequires:  %{_lib}gvnc1.0_0
+BuildRequires:  %{_lib}vncpulse-gir1.0
+BuildRequires:  %{_lib}vncpulse1.0_0
 BuildRequires:  pkgconfig(gvncpulse-1.0)
 
 BuildRequires:  pkgconfig(libarchive)
