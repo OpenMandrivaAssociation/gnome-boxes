@@ -32,6 +32,7 @@ BuildRequires:	pkgconfig(gudev-1.0)
 # Workaround
 BuildRequires:  gtk-vnc
 BuildRequires:  gtk-vnc-common
+BuildRequires:  typelib(SpiceClientGtk)
 BuildRequires:  %{_lib}spice-client-gtk3.0_5
 BuildRequires:  %{_lib}gtk-vnc-gir2.0
 BuildRequires:  %{_lib}gtk-vnc2.0-devel
