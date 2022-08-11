@@ -102,7 +102,7 @@ rm -rf %{buildroot}%{_datadir}/gnome-boxes/vapi/
 %find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
-%doc AUTHORS README.md NEWS
+%doc README.md NEWS
 %{_bindir}/%{name}
 %{_libexecdir}/gnome-boxes-search-provider
 %{_datadir}/%{name}/
