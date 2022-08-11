@@ -2,8 +2,8 @@
 
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
-Version:	41.3
-Release:	2
+Version:	42.3
+Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Url:		https://live.gnome.org/Boxes
@@ -12,6 +12,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-boxes/%{url_ver}/%{name}-%
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires:	libxml2-utils
+BuildRequires:  spice-gtk
 BuildRequires:	vala
 BuildRequires:	vala-tools
 BuildRequires:	vala-devel
@@ -31,6 +32,8 @@ BuildRequires:	pkgconfig(gudev-1.0)
 # Workaround
 BuildRequires:  gtk-vnc
 BuildRequires:  gtk-vnc-common
+BuildRequires:  typelib(SpiceClientGtk)
+BuildRequires:  %{_lib}spice-client-gtk3.0_5
 BuildRequires:  %{_lib}gtk-vnc-gir2.0
 BuildRequires:  %{_lib}gtk-vnc2.0-devel
 BuildRequires:  %{_lib}gtk-vnc2.0_0
@@ -99,7 +102,7 @@ rm -rf %{buildroot}%{_datadir}/gnome-boxes/vapi/
 %find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
-%doc AUTHORS README.md NEWS
+%doc README.md NEWS
 %{_bindir}/%{name}
 %{_libexecdir}/gnome-boxes-search-provider
 %{_datadir}/%{name}/
