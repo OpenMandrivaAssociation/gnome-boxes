@@ -84,8 +84,8 @@ Standalone boxes manager for GNOME desktop.
 %autosetup -p1
 
 %build
-#export CC=gcc
-#export CXX=g++
+export CC=gcc
+export CXX=g++
 %meson
 %meson_build
 
