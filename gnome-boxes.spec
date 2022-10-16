@@ -49,7 +49,7 @@ BuildRequires:	pkgconfig(libosinfo-1.0)
 BuildRequires:	pkgconfig(libvirt-gobject-1.0)
 BuildRequires:	pkgconfig(libvirt-gconfig-1.0)
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:  pkgconfig(libsoup-2.4)
+BuildRequires:  pkgconfig(libsoup-3.0)
 BuildRequires:	yelp-tools
 BuildRequires:	meson
 BuildRequires:	pkgconfig(json-glib-1.0)
