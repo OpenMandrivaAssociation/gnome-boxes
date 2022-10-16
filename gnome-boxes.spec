@@ -56,7 +56,7 @@ BuildRequires:	pkgconfig(json-glib-1.0)
 BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(webkit2gtk-4.1)
-BuildRequires:	pkgconfig(libhandy-1)
+#BuildRequires:	pkgconfig(libhandy-1)
 BuildRequires:	pkgconfig(tracker-sparql-3.0)
 BuildRequires:	tracker-vala
 BuildRequires:  pkgconfig(vte-2.91)
