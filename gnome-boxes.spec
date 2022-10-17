@@ -2,7 +2,7 @@
 
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
-Version:	42.3
+Version:	43.0
 Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
@@ -49,13 +49,13 @@ BuildRequires:	pkgconfig(libosinfo-1.0)
 BuildRequires:	pkgconfig(libvirt-gobject-1.0)
 BuildRequires:	pkgconfig(libvirt-gconfig-1.0)
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:  pkgconfig(libsoup-2.4)
+BuildRequires:  pkgconfig(libsoup-3.0)
 BuildRequires:	yelp-tools
 BuildRequires:	meson
 BuildRequires:	pkgconfig(json-glib-1.0)
 BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  pkgconfig(libusb-1.0)
-BuildRequires:	pkgconfig(webkit2gtk-4.0)
+BuildRequires:	pkgconfig(webkit2gtk-4.1)
 BuildRequires:	pkgconfig(libhandy-1)
 BuildRequires:	pkgconfig(tracker-sparql-3.0)
 BuildRequires:	tracker-vala
@@ -84,8 +84,8 @@ Standalone boxes manager for GNOME desktop.
 %autosetup -p1
 
 %build
-#export CC=gcc
-#export CXX=g++
+export CC=gcc
+export CXX=g++
 %meson
 %meson_build
 
