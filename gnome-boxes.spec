@@ -29,6 +29,7 @@ BuildRequires:	pkgconfig(spice-client-gtk-3.0)
 BuildRequires:	pkgconfig(govirt-1.0)
 BuildRequires:	pkgconfig(gtk-vnc-2.0)
 BuildRequires:	pkgconfig(gudev-1.0)
+BuildRequires:  pkgconfig(libportal)
 # Workaround
 BuildRequires:  gtk-vnc
 BuildRequires:  gtk-vnc-common
