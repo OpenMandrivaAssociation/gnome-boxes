@@ -9,6 +9,7 @@ License:	GPLv2+
 Url:		https://live.gnome.org/Boxes
 Source0:	https://ftp.gnome.org/pub/GNOME/sources/gnome-boxes/%{url_ver}/%{name}-%{version}.tar.xz
 
+BuildRequires:  appstream-util
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires:	libxml2-utils
@@ -109,7 +110,7 @@ rm -rf %{buildroot}%{_datadir}/gnome-boxes/vapi/
 %{_bindir}/%{name}
 %{_libexecdir}/gnome-boxes-search-provider
 %{_datadir}/%{name}/
-%{_datadir}/metainfo/org.gnome.Boxes.appdata.xml
+%{_datadir}/metainfo/org.gnome.Boxes.metainfo.xml
 %{_datadir}/applications/org.gnome.Boxes.desktop
 %{_datadir}/dbus-1/services/org.gnome.Boxes.service
 %{_datadir}/glib-2.0/schemas/org.gnome.boxes.gschema.xml
