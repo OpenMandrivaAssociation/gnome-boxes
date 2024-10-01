@@ -3,7 +3,7 @@
 Summary:	boxes manager for GNOME
 Name:		gnome-boxes
 Version:	47.0
-Release:	1
+Release:	2
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Url:		https://live.gnome.org/Boxes
@@ -17,7 +17,7 @@ BuildRequires:  spice-gtk
 BuildRequires:	vala
 BuildRequires:	vala-tools
 BuildRequires:	vala-devel
-BuildRequires:	tracker-devel
+BuildRequires:	pkgconfig(tinysparql-3.0)
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
 BuildRequires:	pkgconfig(clutter-1.0)
 BuildRequires:	pkgconfig(freerdp2)
@@ -25,7 +25,7 @@ BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
-BuildRequires:  pkgconfig(gtksourceview-4)
+BuildRequires:  pkgconfig(gtksourceview-5)
 BuildRequires:	pkgconfig(spice-client-gtk-3.0)
 BuildRequires:	pkgconfig(govirt-1.0)
 BuildRequires:	pkgconfig(gtk-vnc-2.0)
@@ -60,8 +60,8 @@ BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(webkit2gtk-4.1)
 BuildRequires:	pkgconfig(libhandy-1)
-BuildRequires:	pkgconfig(tracker-sparql-3.0)
-BuildRequires:	tracker-vala
+BuildRequires:	pkgconfig(tinysparql-3.0)
+BuildRequires:	tinysparql-vala
 BuildRequires:  pkgconfig(vte-2.91)
 BuildRequires:  libosinfo-vala
 BuildRequires:  typelib(Handy)
@@ -74,7 +74,7 @@ Requires:	qemu
 Requires: qemu-kvm
 Requires: qemu-audio-spice
 Recommends: qemu-system-x86
-Requires: tracker
+Requires: tinysparql
 # Needed for unattended installer:
 Requires:	mtools
 Requires:	fuseiso
