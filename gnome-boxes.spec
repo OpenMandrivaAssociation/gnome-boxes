@@ -10,6 +10,7 @@ Url:		https://live.gnome.org/Boxes
 Source0:	https://ftp.gnome.org/pub/GNOME/sources/gnome-boxes/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:  appstream-util
+BuildRequires:  desktop-file-utils
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires:	libxml2-utils
