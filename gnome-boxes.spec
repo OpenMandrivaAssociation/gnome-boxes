@@ -67,6 +67,7 @@ BuildRequires:  pkgconfig(vte-2.91)
 BuildRequires:  libosinfo-vala
 BuildRequires:  typelib(Handy)
 BuildRequires:  appstream-util
+BuildRequires:	atomic-devel
 
 # XXX - libvirtd service should be running
 Requires:	libvirt-utils
